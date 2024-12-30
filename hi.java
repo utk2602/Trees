@@ -27,4 +27,11 @@ Skewed Binary tree every Node has only one childd
 
 
 Ordered Bnary Tree - Every node has a property 
+
+
+
+
+Preorder traversal NLR
+
+Inorder traversal LNR
 */
