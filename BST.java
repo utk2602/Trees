@@ -1,3 +1,14 @@
+//for every node in the tree , the difference in height of left and right subtree of that node
+//should be less than equal to 1
+//Balanced tree
+
+
+
+/*So the problem is the tree not being balanced and that will be solved by self balancing binary tree which is termed as AVL
+It will be restructured in such a way that the unbalanced binary tree will be balanced
+
+ */
+
 class BST {
     public class Node {
       private int value;
@@ -100,3 +111,24 @@ class BST {
     }
   
   }
+  /*
+   algorithm for AVL tree
+   1) Insert normally the node (n)
+   2) Start from node n and find the node which makes it unbalanced 
+   Bottom Up approach 
+   3) Using one of the four rules rotate 
+
+
+
+
+
+
+
+   the 4 methods 
+
+
+
+   ok so the "Grandchild" will be the last node which will be added in the line of change of the Tree
+   first motivation should be to make everyone come into a single line 
+   
+   */

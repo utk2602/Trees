@@ -1,0 +1,76 @@
+so in the screenshot added t1 is the grandchild since that is the last node added in the line of addition 
+1553331 is the left left case when the child and the grnachild both are on the left hand side 
+1603338 is the left right case since the child is on the left and granchild is on the right 
+160841 is the right right case 
+161643 is the right left case 
+
+
+
+
+
+for the first case only have to do right rotation 
+but in the second case we have to do both left rotation and then right rotation 
+since third case is the right right case so it will be left rotated and thats it 
+in the fourth case firstly right rotation and then left rotation
+
+
+
+if height of node.left - node.right >1 then it is a left heavy tree and hence can be right rotated {
+    //left heavy case 
+    if( height(node.left.left))-height(node.left.right)>0)
+    {//left-left case 
+    return rightRotate(node);
+    }
+    if(height(node.left.left)-height(node.left.right)<0){
+      //left right case
+      node.left = leftRotate(node.left);
+      return rightRotate(node);
+    }
+}
+
+if height of node.right - node.left >1 then it is a right heavy tree and hence can be left rotated {
+    //right heavy case 
+    if( height(node.right.left))-height(node.right.right)<0)
+    {//right-right case 
+    return leftRotate(node);
+    }
+    if(height(node.right.left)-height(node.right.right)>0){
+      //left right case
+      node.right = rightRotate(node.right);
+      return leftRotate(node);
+    }
+return node 
+
+
+
+//look into it t1 , t3 is not to be changed only t2 changes 
+public Node rightRotate(Node p){
+    Node c = p.left;
+    Node t = c.right;
+
+    -- Perform rotation
+    c.right = p;
+    p.left = t;
+
+    p.height = Math.max(height(p.left),height(p.right)+1);
+    c.height = Math.max(height(c.left),height(c.right)+1);
+    
+    return c;
+
+}
+
+//look into it t1 , t3 is not to be changed only t2 changes 
+public Node leftRotate(Node p){
+    Node p = c.right;
+    Node t = p.left;
+      
+    -- Perform rotation
+    p.left = c;
+    c.right = t;
+
+    p.height = Math.max(height(p.left),height(p.right)+1);
+    c.height = Math.max(height(c.left),height(c.right)+1);
+    
+    return p;
+
+}
