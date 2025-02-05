@@ -132,3 +132,19 @@ class BST {
    first motivation should be to make everyone come into a single line 
    
    */
+
+
+  /* Pre order is Root -> Left -> Right 
+   * In order is Left -> Root -> Right
+   * Post order is Left -> Right -> Root
+   * Flatten Bi                                                                 nary Tree to a LinkedList 
+   Bad solution 
+   Normal pre ourder tarverse 
+   as we traverse , store nodes in queue
+   in the end , remove the first node and make it root
+   then keep on removing the nodes from the queue and make them right child of the root
+
+
+
+   Good solution
+  */
